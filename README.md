@@ -7,7 +7,7 @@ A Sketch plugin which makes managing overrides easier.
 
 [Download][] the latest release, unzip and double click on the .sketchplugin file.
 
-[Download]: https://github.com/ozgurgunes/Sketch-Symbol-States/releases/latest/download/symbol-states.sketchplugin.zip
+[Download]: https://github.com/ozgurgunes/Sketch-Overrides-Manager/releases/latest/download/overrides-manager.sketchplugin.zip
 
 #### Alternatively
 
