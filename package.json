@@ -1,0 +1,35 @@
+{
+  "name": "overrides-manager",
+  "description": "A Sketch plugin which makes managing overrides easier.",
+  "homepage": "https://github.com/ozgurgunes/Sketch-Overrides-Manager",
+  "author": "Ozgur Gunes <o.gunes@gmail.com>",
+  "license": "MIT",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ozgurgunes/Sketch-Overrides-Manager.git"
+  },
+  "engines": {
+    "sketch": ">=3.0"
+  },
+  "skpm": {
+    "name": "Overrides Manager",
+    "manifest": "src/manifest.json",
+    "main": "overrides-manager.sketchplugin",
+    "assets": [
+      "assets/**/*"
+    ]
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.5.11"
+  },
+  "dependencies": {
+    "sketch-module-google-analytics": "^0.1.4"
+  }
+}
