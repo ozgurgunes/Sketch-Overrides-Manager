@@ -2,7 +2,6 @@
 
 A Sketch plugin which makes managing overrides easier.
 
-
 ## Installation
 
 [Download][] the latest release, unzip and double click on the .sketchplugin file.
@@ -14,6 +13,8 @@ A Sketch plugin which makes managing overrides easier.
 Search for Symbol States in [Sketchrunner](http://sketchrunner.com/) or [Sketchpacks](https://sketchpacks.com/).
 
 ## Usage
+
+Select a symbol master (artboard), then;
 
 ### Disable All Overrides
 

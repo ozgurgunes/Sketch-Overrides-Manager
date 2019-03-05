@@ -10,7 +10,7 @@
     "url": "https://github.com/ozgurgunes/Sketch-Overrides-Manager.git"
   },
   "engines": {
-    "sketch": ">=3.0"
+    "sketch": ">=53"
   },
   "skpm": {
     "name": "Overrides Manager",

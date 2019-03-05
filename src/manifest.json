@@ -5,7 +5,7 @@
   "identifier": "com.gunesozgur.sketch.overrides-manager",
   "homepage": "https://github.com/ozgurgunes/Sketch-Overrides-Manager",
   "author": "Ozgur Gunes <o.gunes@gmail.com>",
-  "compatibleVersion": 3,
+  "compatibleVersion": 53,
   "bundleVersion": 1,
   "icon": "icon.png",
   "commands": [

@@ -6,15 +6,19 @@ var doc = sketch.getSelectedDocument(),
   selection = doc.selectedLayers
 
 export default function(context) {
+  var eventLabel, message
   if (selection.length != 1 || selection.layers[0].type != sketch.Types.SymbolMaster) {
-    UI.message("Please select a symbol master.")
+    eventLabel = "error"
+    message = "Please select a symbol master."
   } else {
-    var symbol = selection.layers[0]
-    symbol.overrides.map(override => {
-      override.editable = false
-    })
+    selection.layers[0]
+      .overrides.map(override => {
+        override.editable = false
+      })
     context.document.reloadInspector()
-    analytics(context, 'Disable All Overrides')
-    UI.message("Overrides Manager: All overrides been disabled.")
+    eventLabel = "success"
+    message = "All overrides been disabled."
   }
+  analytics(context, eventLabel)
+  UI.message(context.plugin.name() + ": " + message)
 }

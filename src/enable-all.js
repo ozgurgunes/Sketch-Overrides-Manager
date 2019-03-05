@@ -5,17 +5,20 @@ import analytics from './analytics.js'
 var doc = sketch.getSelectedDocument(),
   selection = doc.selectedLayers
 
-export default function() {
+export default function(context) {
+  var eventLabel, message
   if (selection.length != 1 || selection.layers[0].type != sketch.Types.SymbolMaster) {
-    UI.message("Please select a symbol master.")
+    eventLabel = "error"
+    message = "Please select a symbol master."
   } else {
-    var symbol = selection.layers[0]    
-    symbol.overrides.map(override => {
-      override.editable = true
-    })
-      //doc.selectedPage.changeSelectionBySelectingLayers(symbol)
+    selection.layers[0]
+      .overrides.map(override => {
+        override.editable = true
+      })
     context.document.reloadInspector()
-    analytics(context, 'Enable All Overrides')
-    UI.message("Overrides Manager: All overrides been enabled.")
+    eventLabel = "success"
+    message = "All overrides been enabled."
   }
+  analytics(context, eventLabel)
+  UI.message(context.plugin.name() + ": " + message)
 }
