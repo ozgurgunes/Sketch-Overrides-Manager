@@ -5,12 +5,12 @@
   "authorEmail": "o.gunes@gmail.com",
   "homepage": "https://github.com/ozgurgunes/Sketch-Overrides-Manager",
   "license": "MIT",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/ozgurgunes/Sketch-Overrides-Manager.git"
   },
-  "bugs": { 
+  "bugs": {
     "url": "https://github.com/ozgurgunes/Sketch-Overrides-Manager/issues"
   },
   "engines": {
