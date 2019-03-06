@@ -1,13 +1,17 @@
 {
   "name": "overrides-manager",
   "description": "A Sketch plugin which makes managing overrides easier.",
+  "author": "Özgür Güneş",
+  "authorEmail": "o.gunes@gmail.com",
   "homepage": "https://github.com/ozgurgunes/Sketch-Overrides-Manager",
-  "author": "Ozgur Gunes <o.gunes@gmail.com>",
   "license": "MIT",
   "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ozgurgunes/Sketch-Overrides-Manager.git"
+  },
+  "bugs": { 
+    "url": "https://github.com/ozgurgunes/Sketch-Overrides-Manager/issues"
   },
   "engines": {
     "sketch": ">=53"
