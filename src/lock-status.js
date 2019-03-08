@@ -10,13 +10,19 @@ export default function(context) {
     eventLabel = "error"
     message = "Please select a symbol master."
   } else {
-    selection.layers[0]
-      .overrides.map(override => {
-        override.editable = false
+    var symbol = selection.layers[0]
+    symbol.overrides
+      .filter(override => override.id.indexOf("/") < 0)
+      .map(layer => {
+        symbol.overrides
+          .filter(override => override.path.startsWith(layer.path))
+          .map(override => {
+            override.editable = !layer.affectedLayer.locked
+          })
       })
     context.document.reloadInspector()
     eventLabel = "success"
-    message = "All overrides been disabled."
+    message = "All overrides enabled or disabled depending on layer lock status."
   }
   analytics(context, eventLabel)
   UI.message(context.plugin.name() + ": " + message)

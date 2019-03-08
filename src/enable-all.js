@@ -2,8 +2,7 @@ import sketch from 'sketch/dom'
 import UI from 'sketch/ui'
 import analytics from './analytics.js'
 
-var doc = sketch.getSelectedDocument(),
-  selection = doc.selectedLayers
+var selection = sketch.getSelectedDocument().selectedLayers
 
 export default function(context) {
   var eventLabel, message

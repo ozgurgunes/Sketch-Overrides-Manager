@@ -29,6 +29,11 @@
       "name": "Disable Locked Layers",
       "identifier": "overrides-manager.disable-locked",
       "script": "./disable-locked.js"
+    },
+    {
+      "name": "Same As Lock Status",
+      "identifier": "overrides-manager.lock-status",
+      "script": "./lock-status.js"
     }
   ],
   "menu": {
@@ -37,7 +42,8 @@
       "overrides-manager.enable-all",
       "overrides-manager.disable-all",
       "overrides-manager.enable-unlocked",
-      "overrides-manager.disable-locked"
+      "overrides-manager.disable-locked",
+      "overrides-manager.lock-status"
     ]
   }
 }

@@ -40,3 +40,9 @@ Make all unlocked layers and all their children editable;
 
 * Go to ```Plugins > Overrides Manager > Enable Unlocked Layers```
 
+### Same As Lock Status
+
+Enable or disable all overrides depending on layer lock status;
+
+* Go to ```Plugins > Overrides Manager > Same As Lock Status```
+

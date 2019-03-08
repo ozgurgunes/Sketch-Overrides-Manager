@@ -2,8 +2,7 @@ import sketch from 'sketch/dom'
 import UI from 'sketch/ui'
 import analytics from './analytics.js'
 
-var doc = sketch.getSelectedDocument(),
-  selection = doc.selectedLayers
+var selection = sketch.getSelectedDocument().selectedLayers
 
 export default function(context) {
   var eventLabel, message
@@ -15,11 +14,11 @@ export default function(context) {
     symbol.overrides
       .filter(override => override.id.indexOf("/") < 0 && override.affectedLayer.locked)
       .map(layer => {
-        symbol.overrides.map(override => {
-          if (override.path.startsWith(layer.path)) {
+        symbol.overrides
+          .filter(override => override.path.startsWith(layer.path))
+          .map(override => {
             override.editable = false
-          }
-        })
+          })
       })
     context.document.reloadInspector()
     eventLabel = "success"
