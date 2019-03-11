@@ -1,4 +1,7 @@
-# Overrides Manager
+# Overrides Manager [![Download Latest][image]][link]
+
+[image]: https://img.shields.io/github/release/ozgurgunes/Sketch-Overrides-Manager.svg?label=Download%20Latest
+[link]: https://github.com/ozgurgunes/Sketch-Overrides-Manager/releases/latest/download/overrides-manager.sketchplugin.zip
 
 A Sketch plugin which makes managing overrides easier.
 

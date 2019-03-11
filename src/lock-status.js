@@ -4,11 +4,12 @@ import analytics from './analytics.js'
 
 var selection = sketch.getSelectedDocument().selectedLayers
 
-export default function(context) {
-  var eventLabel, message
+export default context => {
+  var message, eventLabel, eventValue
   if (selection.length != 1 || selection.layers[0].type != sketch.Types.SymbolMaster) {
-    eventLabel = "error"
     message = "Please select a symbol master."
+    eventLabel = "Selection Error"
+    eventValue = 0
   } else {
     var symbol = selection.layers[0]
     symbol.overrides
@@ -21,9 +22,10 @@ export default function(context) {
           })
       })
     context.document.reloadInspector()
-    eventLabel = "success"
     message = "All overrides enabled or disabled depending on layer lock status."
-  }
-  analytics(context, eventLabel)
-  UI.message(context.plugin.name() + ": " + message)
+    eventLabel = "Success"
+    eventValue = selection.layers[0].overrides.length
+    }
+    analytics(context, eventLabel, eventValue)
+    UI.message(context.command.name() + ": " + message)
 }
