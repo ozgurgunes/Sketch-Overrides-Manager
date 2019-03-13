@@ -17,7 +17,7 @@ Search for Symbol States in [Sketchrunner](http://sketchrunner.com/) or [Sketchp
 
 ## Usage
 
-Select a symbol master (artboard), then;
+Select one or more symbol masters (artboard), then;
 
 ### Disable All Overrides
 
