@@ -2,15 +2,16 @@ import sketch from 'sketch/dom'
 import UI from 'sketch/ui'
 import {
   getSymbols,
+  successMessage,
   analytics
 } from './utils.js'
 
 var selection = sketch.getSelectedDocument().selectedLayers
 
 export default context => {
-  let c = 0
   try {
-    let symbols = getSymbols(selection)
+    let symbols = getSymbols(selection),
+      c = 0
     symbols.map(symbol => {
       symbol.overrides
         .filter(override => override.id.indexOf("/") < 0)
@@ -18,17 +19,17 @@ export default context => {
           symbol.overrides
             .filter(override => override.path.startsWith(layer.path))
             .map(override => {
-              if (override.editable != !layer.affectedLayer.locked) {
+              if (override.editable != !override.affectedLayer.locked) {
                 override.editable = !layer.affectedLayer.locked
-                c++
               }
-
+              c++
             })
         })
     })
     context.document.reloadInspector()
     analytics("Success", c)
-    return UI.message(context.command.name() + ": " + c + " overrides in " + symbols.length + " symbols set.")
+    return successMessage(c + " overrides in " +
+      symbols.length + " symbols set.")
   } catch (e) {
     return e
   }

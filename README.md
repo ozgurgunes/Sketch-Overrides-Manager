@@ -1,15 +1,15 @@
-# Overrides Manager [![Download Latest][image]][link]
+<img src="https://github.com/ozgurgunes/Sketch-Overrides-Manager/blob/master/assets/icon.png?raw=true" alt="Sketch Overrides manager" width="128" align="right" />
 
-[image]: https://img.shields.io/github/release/ozgurgunes/Sketch-Overrides-Manager.svg?label=Download%20Latest
+# Overrides Manager  [![Download Latest][image]][link]
+
+[image]: https://img.shields.io/github/release/ozgurgunes/Sketch-Overrides-Manager.svg?label=Download
 [link]: https://github.com/ozgurgunes/Sketch-Overrides-Manager/releases/latest/download/overrides-manager.sketchplugin.zip
 
-A Sketch plugin which makes managing overrides easier.
+Overrides Manager plugin for Sketch, which makes managing overrides easier, lets you enable or disable hundreds of symbol overrides with one click.
 
 ## Installation
 
-[Download][] the latest release, unzip and double click on the .sketchplugin file.
-
-[Download]: https://github.com/ozgurgunes/Sketch-Overrides-Manager/releases/latest/download/overrides-manager.sketchplugin.zip
+[Download][link] the latest release, unzip and double click on the .sketchplugin file.
 
 #### Alternatively
 
@@ -43,9 +43,9 @@ Make all unlocked layers and all their children editable;
 
 * Go to ```Plugins > Overrides Manager > Enable Unlocked Layers```
 
-### Same As Lock Status
+### Depend On Lock Status
 
 Enable or disable all overrides depending on layer lock status;
 
-* Go to ```Plugins > Overrides Manager > Same As Lock Status```
+* Go to ```Plugins > Overrides Manager > Depend On Lock Status```
 

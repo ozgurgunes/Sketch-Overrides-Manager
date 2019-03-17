@@ -31,7 +31,7 @@
       "script": "./disable-locked.js"
     },
     {
-      "name": "Same As Lock Status",
+      "name": "Depend On Lock Status",
       "identifier": "overrides-manager.lock-status",
       "script": "./lock-status.js"
     }
