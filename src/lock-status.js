@@ -18,9 +18,7 @@ export default context => {
           symbol.overrides
             .filter(override => override.path.startsWith(layer.path))
             .map(override => {
-              if (override.editable != !override.affectedLayer.locked) {
-                override.editable = !layer.affectedLayer.locked
-              }
+              override.editable = !layer.affectedLayer.locked
               c++
             })
         })
