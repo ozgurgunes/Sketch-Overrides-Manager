@@ -1,13 +1,12 @@
 {
   "name": "Overrides Manager",
   "description": "A Sketch plugin which makes managing overrides easier.",
-  "appcast": "https://raw.githubusercontent.com/ozgurgunes/Sketch-Overrides-Manager/master/.appcast.xml",
   "identifier": "com.gunesozgur.sketch.overrides-manager",
-  "homepage": "https://github.com/ozgurgunes/Sketch-Overrides-Manager",
-  "author": "Özgür Güneş",
+  "author": "Ozgur Gunes",
   "authorEmail": "o.gunes@gmail.com",
-  "compatibleVersion": 53,
-  "bundleVersion": 1,
+  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "appcast": "https://raw.githubusercontent.com/ozgurgunes/Sketch-Overrides-Manager/master/.appcast.xml",
+  "homepage": "https://github.com/ozgurgunes/Sketch-Overrides-Manager",
   "icon": "icon.png",
   "commands": [
     {

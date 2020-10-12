@@ -1,13 +1,10 @@
 import sketch from 'sketch/dom'
 import analytics from './analytics'
-import {
-  getSymbols,
-  successMessage
-} from './utils'
+import { getSymbols, successMessage } from './utils'
 
 var selection = sketch.getSelectedDocument().selectedLayers
 
-export default context => {
+export default function(context) {
   try {
     let symbols = getSymbols(selection)
     let c = 0
@@ -25,8 +22,9 @@ export default context => {
     })
     context.document.reloadInspector()
     analytics('Success', c)
-    return successMessage(c + ' overrides in ' +
-      symbols.length + ' symbols set.')
+    return successMessage(
+      c + ' overrides in ' + symbols.length + ' symbols set.'
+    )
   } catch (e) {
     return e
   }

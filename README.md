@@ -13,7 +13,7 @@ Overrides Manager plugin for Sketch, which makes managing overrides easier, lets
 
 #### Alternatively
 
-Search for Symbol States in [Sketchrunner](http://sketchrunner.com/) or [Sketchpacks](https://sketchpacks.com/).
+Search for Overrides Manager in [Sketchrunner](http://sketchrunner.com/) or [Sketchpacks](https://sketchpacks.com/).
 
 ## Usage
 
