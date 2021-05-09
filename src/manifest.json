@@ -12,37 +12,58 @@
     {
       "name": "Enable All Overrides",
       "identifier": "overrides-manager.enable-all",
-      "script": "./enable-all.js"
+      "script": "./command.js",
+      "handler": "enableAll"
     },
     {
       "name": "Disable All Overrides",
       "identifier": "overrides-manager.disable-all",
-      "script": "./disable-all.js"
+      "script": "./command.js",
+      "handler": "disableAll"
     },
     {
       "name": "Enable Unlocked Layers",
       "identifier": "overrides-manager.enable-unlocked",
-      "script": "./enable-unlocked.js"
+      "script": "./command.js",
+      "handler": "enableUnlocked"
     },
     {
       "name": "Disable Locked Layers",
       "identifier": "overrides-manager.disable-locked",
-      "script": "./disable-locked.js"
+      "script": "./command.js",
+      "handler": "disableLocked"
     },
     {
       "name": "Depend On Lock Status",
       "identifier": "overrides-manager.lock-status",
-      "script": "./lock-status.js"
+      "script": "./command.js",
+      "handler": "dependOnLockStatus"
+    },
+    {
+      "name": "Enable Text Overrides",
+      "identifier": "overrides-manager.enable-text-overrides",
+      "script": "./command.js",
+      "handler": "enableTextOverrides"
+    },
+    {
+      "name": "Disable Text Overrides",
+      "identifier": "overrides-manager.disable-text-overrides",
+      "script": "./command.js",
+      "handler": "disableTextOverrides"
     }
-  ],
+      ],
   "menu": {
     "title": "Overrides Manager",
     "items": [
       "overrides-manager.enable-all",
       "overrides-manager.disable-all",
+      "-",
       "overrides-manager.enable-unlocked",
       "overrides-manager.disable-locked",
-      "overrides-manager.lock-status"
+      "overrides-manager.lock-status",
+      "-",
+      "overrides-manager.enable-text-overrides",
+      "overrides-manager.disable-text-overrides"
     ]
   }
 }
